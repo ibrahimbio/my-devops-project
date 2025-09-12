@@ -3,7 +3,7 @@ const http = require("http");
 const url = require("url");
 
 // environment configuration
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 const ENVIRONMENT = process.env.NODE_ENV || "development";
 
 let requestCount = 0;

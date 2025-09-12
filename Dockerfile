@@ -37,11 +37,11 @@ COPY --chown=nodeuser:nodejs app.js ./
 USER nodeuser
 
 # Expose port
-EXPOSE 3000
+EXPOSE 8080
 
 # Health check with proper timing for Node.js startup
 HEALTHCHECK --interval=30s --timeout=10s --start-period=15s --retries=3 \
-  CMD curl -f http://localhost:3000/health || exit 1
+  CMD curl -f http://localhost:8080/health || exit 1
 
 # Use dumb-init for proper signal handling in containers
 ENTRYPOINT ["dumb-init", "--"]
