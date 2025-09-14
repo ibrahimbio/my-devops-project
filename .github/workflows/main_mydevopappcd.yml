@@ -55,4 +55,3 @@ jobs:
           app-name: 'mydevopapp'
           slot-name: 'Production'
           package: .
-
